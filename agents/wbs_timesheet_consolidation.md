@@ -59,12 +59,14 @@ Create a clearly separated `Manual(Non-Ticket) Efforts` area or sheet with edita
 - Keep rejected, missing, and pending entries out of the final total and surface them as exceptions.
 - When using an existing `Consolidated` sheet as a manual source, treat populated ticket/activity rows not traceable to the SOHAR WBS filter as manual candidates. Do not silently convert them into automated WBS data.
 
-## Output: SOHAR Consolidated
+## Output: <<Customer name>> Consolidated
+
+
 
 Create or refresh a `<<Customer name>> Consolidated` sheet with this layout:
 
-| Resource Name | Ticket Description | No of hours | Total Effort | Master Tracker | Source Type | WBS / Receiver | Reconciliation Note |
-|---|---|---:|---:|---|---|---|---|
+| Resource Name | Ticket Description |Ticket Description | ITP Hours | ESP Hours |	Difference (ITP-ESP) | Total Effort | Master Tracker | Source Type | WBS / Receiver | Reconciliation Note |
+|---|---|---:|---:|---|---|---|---|---|---|---|
 
 - List each resource once at the start of its block.
 - Show ticket/activity rows beneath it; `No of hours` is the item-level amount.
@@ -74,12 +76,14 @@ Create or refresh a `<<Customer name>> Consolidated` sheet with this layout:
 
 ## Reconciliation controls
 
-1. Automated detail hours must equal automated resource subtotals.
-2. Included approved manual hours must equal manual subtotals.
-3. Every automated row must have the confirmed account-assignment text or WBS code.
-4. A ticket/activity cannot appear as both automated and manual unless the user documents an approved split; flag it otherwise.
-5. When refreshing an existing consolidation, show `Current Total`, `Rebuilt Total`, and `Difference` by resource and overall. Do not force a match by altering source hours.
-6. Flag missing resource names, blank/invalid hours, non-approved manual entries, unrecognized account assignments, and total differences.
+1. Always create a new excel sheet. Do not update the existing source sheet. 
+2. Automated detail hours must equal automated resource subtotals.
+3. Included approved manual hours must equal manual subtotals.
+4. Every automated row must have the confirmed account-assignment text or WBS code.
+5. A ticket/activity cannot appear as both automated and manual unless the user documents an approved split; flag it otherwise.
+6. When refreshing an existing consolidation, show `Current Total`, `Rebuilt Total`, and `Difference` by resource and overall. Do not force a match by altering source hours.
+7. Flag missing resource names, blank/invalid hours, non-approved manual entries, unrecognized account assignments, and total differences.
+
 
 ## Deliverable behavior
 
