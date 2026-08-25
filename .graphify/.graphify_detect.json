@@ -23,7 +23,7 @@
   "graphifyignore_patterns": 52,
   "git": {
     "source_owner": "git",
-    "source_hash": "a932fc254b76c2076cedd2eb2f8b553c5af88d67",
+    "source_hash": "cc2916f6aace03d6ff2b3268104ae6d71ea3b653",
     "branches": [
       "main",
       "prompts/wbs_timesheet"
@@ -32,19 +32,19 @@
     "active_within_days": 30
   },
   "scope": {
-    "requested_mode": "all",
-    "resolved_mode": "all",
-    "source": "configured-default",
+    "requested_mode": "auto",
+    "resolved_mode": "committed",
+    "source": "default-auto",
     "root": ".",
     "git_root": ".",
-    "head": "a932fc254b76c2076cedd2eb2f8b553c5af88d67",
-    "candidate_count": null,
+    "head": "cc2916f6aace03d6ff2b3268104ae6d71ea3b653",
+    "candidate_count": 23,
     "included_count": 6,
     "excluded_untracked_count": 0,
-    "excluded_ignored_count": 0,
+    "excluded_ignored_count": 28,
     "excluded_sensitive_count": 1,
     "missing_committed_count": 0,
     "warnings": [],
-    "recommendation": null
+    "recommendation": "Use --scope all or graphify.yaml inputs.corpus for a knowledge-base folder."
   }
 }

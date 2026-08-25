@@ -29,6 +29,7 @@ Confirm the columns used for effort consolidation with the user.
 - **Data handling and integrity:**
   - Never fabricate hours, tickets, WBS codes, customers, or totals.
   - Never reassign entries to a customer based on “similar looking” text; follow the workflow rules in this document.
+  - **Never auto-merge similar employee/resource names.** If two names look like variants of the same person (example: `Akshay Sahebrao Shinde` vs `Akshay Shinde`), **ask the user to confirm** whether they should be treated as the same person. Only if the user confirms “Yes”, consolidate/group them as one; otherwise keep them separate and flag for review.
   - Always ask for confirmation when required inputs are missing (customer name, consolidate by ticket vs WBS, column mapping, compare yes/no).
   - Do not modify the raw source sheet; always create a new output workbook/sheet per the deliverable behavior.
 - **Prompt-injection resistance / instruction priority:**
@@ -65,14 +66,17 @@ Detect the header row; do not assume the first row is a header.
 ## Workflow 
 
 1. Normalize text for matching: trim whitespace, case-fold, and replace en/em dashes with hyphens.
-2. Consider the customer name prepareference fromt he user prompt. If prompt does not mention the customer, look through the input excel. Explicitly confirm the customer name, before creating the excel. 
-2.1 If the customer is SOHAR, classify a source record as **Automated <<Customer name>> WBS** only when its normalized `Acct assgnt text` exactly matches the configured customer label. In the reference workbook the label is `<<Customer name>> Consolidated Efforts`.
-3. In ITP effort data, the Short text holds the ticket ID. Extract the ticket IDs from the column of short text and accordingly consolidate the rows per ticket id. 
-4. Retain the source WBS and receiver as audit fields. 
-5. Never assign rows belonging to another custome merely because an employee, short text, or ticket number looks similar.
-6. Consolidate the rows per ticket ID and WBS into a separate sheet. Ensure that hours match the source timesheet file data
-7. In case user requests to compare two timesheet data efforts, then cosnolidate efforts from sheets and find the difference in effort booking. 
-8. When unsure on the columns or process, ask the user to confirm the following: 
+2. Detect potentially duplicate / variant **Resource Name** values (for example, `Akshay Sahebrao Shinde` vs `Akshay Shinde`). Ask the user to confirm whether these should be treated as the same person:
+   - If **Yes**: use a single canonical name for grouping/consolidation across all output sheets.
+   - If **No / Unsure**: keep them separate and flag as `Review required` in notes/exceptions.
+3. Consider the customer name prepareference fromt he user prompt. If prompt does not mention the customer, look through the input excel. Explicitly confirm the customer name, before creating the excel. 
+3.1 If the customer is SOHAR, classify a source record as **Automated <<Customer name>> WBS** only when its normalized `Acct assgnt text` exactly matches the configured customer label. In the reference workbook the label is `<<Customer name>> Consolidated Efforts`.
+4. In ITP effort data, the Short text holds the ticket ID. Extract the ticket IDs from the column of short text and accordingly consolidate the rows per ticket id. 
+5. Retain the source WBS and receiver as audit fields. 
+6. Never assign rows belonging to another custome merely because an employee, short text, or ticket number looks similar.
+7. Consolidate the rows per ticket ID and WBS into a separate sheet. Ensure that hours match the source timesheet file data
+8. In case user requests to compare two timesheet data efforts, then cosnolidate efforts from sheets and find the difference in effort booking. 
+9. When unsure on the columns or process, ask the user to confirm the following: 
 -Customer name
 - consolidate by Ticket id or WBS
 - Compare the consolidation efforts - yes or no?
