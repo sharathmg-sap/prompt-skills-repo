@@ -37,3 +37,5 @@ dist/
 .pytest_cache/
 .coverage
 htmlcov/
+# graphify-axet
+.graphify/

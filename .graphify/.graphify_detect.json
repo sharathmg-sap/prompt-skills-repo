@@ -1,22 +1,32 @@
 {
   "files": {
-    "code": [],
+    "code": [
+      "skills/examples/prompt-optimization-v1/scripts/__init__.py",
+      "skills/examples/prompt-optimization-v1/scripts/cli.py",
+      "skills/examples/prompt-optimization-v1/scripts/integration.py",
+      "skills/examples/prompt-optimization-v1/scripts/optimizer.py",
+      "skills/examples/prompt-optimization-v1/scripts/semantic.py",
+      "skills/examples/prompt-optimization-v1/scripts/validators.py"
+    ],
     "document": [],
     "paper": [],
     "image": [],
     "video": []
   },
-  "total_files": 0,
-  "total_words": 0,
+  "total_files": 6,
+  "total_words": 2019,
   "needs_graph": false,
-  "warning": "Corpus is ~0 words - fits in a single context window. You may not need a graph.",
-  "skipped_sensitive": [],
+  "warning": "Corpus is ~2,019 words - fits in a single context window. You may not need a graph.",
+  "skipped_sensitive": [
+    "skills/examples/prompt-optimization-v1/scripts/token_counter.py"
+  ],
   "graphifyignore_patterns": 52,
   "git": {
     "source_owner": "git",
-    "source_hash": "2bf824f9f288cc527e75c74344ee107f96c0ff6d",
+    "source_hash": "a932fc254b76c2076cedd2eb2f8b553c5af88d67",
     "branches": [
-      "main"
+      "main",
+      "prompts/wbs_timesheet"
     ],
     "max_commits": 200,
     "active_within_days": 30
@@ -27,12 +37,12 @@
     "source": "configured-default",
     "root": ".",
     "git_root": ".",
-    "head": "2bf824f9f288cc527e75c74344ee107f96c0ff6d",
+    "head": "a932fc254b76c2076cedd2eb2f8b553c5af88d67",
     "candidate_count": null,
-    "included_count": 0,
+    "included_count": 6,
     "excluded_untracked_count": 0,
     "excluded_ignored_count": 0,
-    "excluded_sensitive_count": 0,
+    "excluded_sensitive_count": 1,
     "missing_committed_count": 0,
     "warnings": [],
     "recommendation": null
