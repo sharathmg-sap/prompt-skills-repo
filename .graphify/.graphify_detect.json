@@ -1,0 +1,50 @@
+{
+  "files": {
+    "code": [
+      "skills/examples/prompt-optimization-v1/scripts/__init__.py",
+      "skills/examples/prompt-optimization-v1/scripts/cli.py",
+      "skills/examples/prompt-optimization-v1/scripts/integration.py",
+      "skills/examples/prompt-optimization-v1/scripts/optimizer.py",
+      "skills/examples/prompt-optimization-v1/scripts/semantic.py",
+      "skills/examples/prompt-optimization-v1/scripts/validators.py"
+    ],
+    "document": [],
+    "paper": [],
+    "image": [],
+    "video": []
+  },
+  "total_files": 6,
+  "total_words": 2019,
+  "needs_graph": false,
+  "warning": "Corpus is ~2,019 words - fits in a single context window. You may not need a graph.",
+  "skipped_sensitive": [
+    "skills/examples/prompt-optimization-v1/scripts/token_counter.py"
+  ],
+  "graphifyignore_patterns": 52,
+  "git": {
+    "source_owner": "git",
+    "source_hash": "a65f258b9ab53463963018f147cf942df6da22ee",
+    "branches": [
+      "main",
+      "prompts/wbs_timesheet"
+    ],
+    "max_commits": 200,
+    "active_within_days": 30
+  },
+  "scope": {
+    "requested_mode": "auto",
+    "resolved_mode": "committed",
+    "source": "default-auto",
+    "root": ".",
+    "git_root": ".",
+    "head": "a65f258b9ab53463963018f147cf942df6da22ee",
+    "candidate_count": 23,
+    "included_count": 6,
+    "excluded_untracked_count": 0,
+    "excluded_ignored_count": 36,
+    "excluded_sensitive_count": 1,
+    "missing_committed_count": 0,
+    "warnings": [],
+    "recommendation": "Use --scope all or graphify.yaml inputs.corpus for a knowledge-base folder."
+  }
+}
