@@ -22,12 +22,16 @@ Technical overview of the repository:
 - Discovery and indexing
 - Security and performance considerations
 
+### [github-mcp-usage.md](github-mcp-usage.md)
+Instructions and examples for using the read-only GitHub MCP Demonstrator agent.
+
 ## Quick Links
 
 - [Main README](../README.md)
 - [Prompts Guide](../prompts/README.md)
 - [Skills Guide](../skills/README.md)
 - [Scripts Guide](../scripts/README.md)
+- [GitHub MCP usage guide](github-mcp-usage.md)
 
 ## Getting Help
 

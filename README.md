@@ -41,6 +41,9 @@ Ability definitions and skill implementations:
 - **examples/**: Example skills and their implementations
 - **templates/**: Reusable skill templates
 
+### `/agents`
+Reusable agent role prompts, including [the GitHub MCP Demonstrator](agents/github_mcp_demonstrator.md).
+
 ### `/scripts`
 Utility scripts and automation tools:
 - **setup/**: Initial setup and configuration scripts
@@ -94,6 +97,7 @@ These resources are designed to be:
 
 - [Contributing Guidelines](docs/CONTRIBUTING.md)
 - [Architecture Overview](docs/ARCHITECTURE.md)
+- [GitHub MCP usage guide](docs/github-mcp-usage.md)
 - [Prompt Guide](prompts/README.md)
 - [Skills Guide](skills/README.md)
 - [Scripts Guide](scripts/README.md)
